@@ -64,8 +64,8 @@
     </div>
 
     <footer class="app-footer">
-        <span><a href="http://www.webtraining-it.com/">webtraining-it.com</a> &copy; 2019</span>
-        <span class="ml-auto">Desarrollado por <a href="http://www.webtraining-it.com/">webtraining-it.com</a></span>
+        <span> &copy; <?php echo date("yy") ?></span>
+        <span class="ml-auto">Desarrollado por andresogc</span>
     </footer>
 
     <!-- Bootstrap and necessary plugins -->
@@ -108,6 +108,43 @@
             modal.find('.modal-body #id_categoria').val(id_categoria);
 
         });
+        //FIN ventana modal para cambiar el estado de la categoria
+
+        //EDITAR PRODUCTO EN VENTANA MODAL
+
+        $('#abrirmodalEditar').on('show.bs.modal', function(event){
+
+            var button = $(event.relatedTarget);
+            var id_caegoria_modal_editar = button.data('id_categoria');
+            var nombre_modal_editar = button.data('nombre');
+            var precio_venta_modal_editar = button.data('precio_venta');
+            var codigo_modal_editar = button.data('codigo');
+            var stock_modal_editar = button.data('stock');
+            var id_producto = button.data('id_producto');
+            var modal = $(this)
+
+            modal.find('.modal-body #id').val(id_caegoria_modal_editar);
+            modal.find('.modal-body #nombre').val(nombre_modal_editar);
+            modal.find('.modal-body #precio_venta').val(precio_venta_modal_editar);
+            modal.find('.modal-body #codigo').val(codigo_modal_editar);
+            modal.find('.modal-body #stock').val(stock_modal_editar);
+            modal.find('.modal-body #id_producto').val(id_producto);
+
+
+        });
+
+
+        /* Cambiar estado de producto */
+        $('#cambiarEstado').on('show.bs.modal', function(event){
+
+        var button = $(event.relatedTarget);
+        var id_producto = button.data('id_producto');
+        var modal = $(this)
+
+        modal.find('.modal-body #id_producto').val(id_producto);
+
+        });
+        //FIN ventana modal para cambiar el estado de la producto
 
 
     </script>
