@@ -147,6 +147,59 @@
         //FIN ventana modal para cambiar el estado de la producto
 
 
+
+        //EDITAR PROVEEDOR EN VENTANA MODAL
+
+        $('#abrirmodalEditar').on('show.bs.modal', function(event){
+
+            var button = $(event.relatedTarget);
+            var nombre_modal_editar = button.data('nombre');
+            var tipo_documento_modal_editar = button.data('tipo_documento');
+            var num_documento_modal_editar = button.data('num_documento');
+            var direccion_modal_editar = button.data('direccion');
+            var email_modal_editar = button.data('email');
+            var telefono_modal_editar = button.data('telefono');
+            var id_proveedor = button.data('id_proveedor');
+            var modal = $(this)
+
+            modal.find('.modal-body #nombre').val(nombre_modal_editar);
+            modal.find('.modal-body #tipo_documento').val(tipo_documento_modal_editar);
+            modal.find('.modal-body #num_documento').val(num_documento_modal_editar);
+            modal.find('.modal-body #direccion').val(direccion_modal_editar);
+            modal.find('.modal-body #email').val(email_modal_editar);
+            modal.find('.modal-body #telefono').val(telefono_modal_editar);
+            modal.find('.modal-body #id_proveedor').val(id_proveedor);
+
+
+        });
+
+         //EDITAR CLIENTE EN VENTANA MODAL
+
+         $('#abrirmodalEditar').on('show.bs.modal', function(event){
+
+            var button = $(event.relatedTarget);
+            var nombre_modal_editar = button.data('nombre');
+            var tipo_documento_modal_editar = button.data('tipo_documento');
+            var num_documento_modal_editar = button.data('num_documento');
+            var direccion_modal_editar = button.data('direccion');
+            var email_modal_editar = button.data('email');
+            var telefono_modal_editar = button.data('telefono');
+            var id_cliente = button.data('id_cliente');
+            var modal = $(this)
+
+            modal.find('.modal-body #nombre').val(nombre_modal_editar);
+            modal.find('.modal-body #tipo_documento').val(tipo_documento_modal_editar);
+            modal.find('.modal-body #num_documento').val(num_documento_modal_editar);
+            modal.find('.modal-body #direccion').val(direccion_modal_editar);
+            modal.find('.modal-body #email').val(email_modal_editar);
+            modal.find('.modal-body #telefono').val(telefono_modal_editar);
+            modal.find('.modal-body #id_cliente').val(id_cliente);
+
+
+         });
+
+
+
     </script>
 </body>
 

@@ -37,9 +37,9 @@
              </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('proveedores')}}" onclick="event.preventDefault(); document.getElementById('proveedores-form').submit();"><i class="fa fa-list"></i> Proveedores</a>
+                <a class="nav-link" href="{{url('proveedor')}}" onclick="event.preventDefault(); document.getElementById('proveedor-form').submit();"><i class="fa fa-list"></i> Proveedores</a>
 
-                <form id="proveedores-form" action="{{url('proveedores')}}" method="GET" style="display:none;">
+                <form id="proveedor-form" action="{{url('proveedor')}}" method="GET" style="display:none;">
                     @csrf
                 </form>
              </li>
@@ -54,9 +54,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('clientes')}}" onclick="event.preventDefault(); document.getElementById('clientes-form').submit();"><i class="fa fa-list"></i> Clientes</a>
+                <a class="nav-link" href="{{url('cliente')}}" onclick="event.preventDefault(); document.getElementById('cliente-form').submit();"><i class="fa fa-list"></i> Clientes</a>
 
-                <form id="clientes-form" action="{{url('clientes')}}" method="GET" style="display:none;">
+                <form id="cliente-form" action="{{url('cliente')}}" method="GET" style="display:none;">
                     @csrf
                 </form>
             </li>
