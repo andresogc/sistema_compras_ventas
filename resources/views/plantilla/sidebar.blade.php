@@ -63,17 +63,17 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('usuarios')}}" onclick="event.preventDefault(); document.getElementById('usuarios-form').submit();"><i class="fa fa-list"></i> Usuarios</a>
+                <a class="nav-link" href="{{url('user')}}" onclick="event.preventDefault(); document.getElementById('user-form').submit();"><i class="fa fa-list"></i> Usuarios</a>
 
-                <form id="usuarios-form" action="{{url('usuarios')}}" method="GET" style="display:none;">
+                <form id="user-form" action="{{url('user')}}" method="GET" style="display:none;">
                     @csrf
                 </form>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('roles')}}" onclick="event.preventDefault(); document.getElementById('roles-form').submit();"><i class="fa fa-list"></i> Roles</a>
+                <a class="nav-link" href="{{url('rol')}}" onclick="event.preventDefault(); document.getElementById('rol-form').submit();"><i class="fa fa-list"></i> Roles</a>
 
-                <form id="roles-form" action="{{url('roles')}}" method="GET" style="display:none;">
+                <form id="rol-form" action="{{url('rol')}}" method="GET" style="display:none;">
                     @csrf
                 </form>
             </li>

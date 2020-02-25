@@ -199,6 +199,55 @@
          });
 
 
+           //EDITAR USUARIO EN VENTANA MODAL
+
+           $('#abrirmodalEditar').on('show.bs.modal', function(event){
+
+                var button = $(event.relatedTarget);
+                var nombre_modal_editar = button.data('nombre');
+                var tipo_documento_modal_editar = button.data('tipo_documento');
+                var num_documento_modal_editar = button.data('num_documento');
+                var direccion_modal_editar = button.data('direccion');
+                var telefono_modal_editar = button.data('telefono');
+                var email_modal_editar = button.data('email');
+                var id_rol_modal_editar = button.data('id_rol');
+                var usuario_modal_editar = button.data('usuario');
+                var id_usuario = button.data('id_usuario');
+                var modal = $(this)
+
+                modal.find('.modal-body #nombre').val(nombre_modal_editar);
+                modal.find('.modal-body #tipo_documento').val(tipo_documento_modal_editar);
+                modal.find('.modal-body #num_documento').val(num_documento_modal_editar);
+                modal.find('.modal-body #direccion').val(direccion_modal_editar);
+                modal.find('.modal-body #telefono').val(telefono_modal_editar);
+                modal.find('.modal-body #email').val(email_modal_editar);
+                modal.find('.modal-body #id_rol').val(id_rol_modal_editar);
+                modal.find('.modal-body #usuario').val(usuario_modal_editar);
+                modal.find('.modal-body #id_usuario').val(id_usuario);
+
+
+
+
+            });
+
+
+            /* Cambiar estado de usuario */
+            $('#cambiarEstado').on('show.bs.modal', function(event){
+
+                var button = $(event.relatedTarget);
+                var id_usuario = button.data('id_usuario');
+                var modal = $(this)
+
+
+
+                modal.find('.modal-body #id_usuario').val(id_usuario);
+
+            });
+        //FIN ventana modal para cambiar el estado del usuario
+
+
+
+
 
     </script>
 </body>

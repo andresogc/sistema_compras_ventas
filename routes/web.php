@@ -24,6 +24,12 @@ Route::resource('proveedor','ProveedorController');
 
 Route::resource('cliente','ClienteController');
 
+Route::resource('rol','RolController');
+
+Route::resource('user','UserController');
+
+
+
 
 
 
