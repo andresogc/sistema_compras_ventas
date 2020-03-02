@@ -90,6 +90,8 @@
     <script src="{{asset('js/Chart.min.js')}}"></script>
     <!-- GenesisUI main scripts -->
     <script src="{{asset('js/template.js')}}"></script>
+    <!-- sweetalert2 -->
+    <script src="{{asset('js/sweetalert2.all.min.js')}}"></script>
 
     <script>
         /* EDITAR CATEGORIA EN VENTANA MODAL */
@@ -100,8 +102,7 @@
 
             var button = $(event.relatedTarget);
             var nombre_modal_editar = button.data('nombre');
-            var descripcion_modal_editar = button.data('descripcion');
-            var id_categoria = button.data('id_categoria');
+            var descripcion_modal_editar = button.data('descripcion');            var id_categoria = button.data('id_categoria');
             var modal = $(this)
 
 
@@ -259,10 +260,24 @@
         //FIN ventana modal para cambiar el estado del usuario
 
 
+            /* VENTANA MODAL CAMBIAR ESTADO DE LA COMPRA  */
+            $('#cambiarEstadoCompra').on('show.bs.modal', function(event){
+
+                var button = $(event.relatedTarget);
+                var id_compra = button.data('id_compra');
+                var modal = $(this)
+
+                modal.find('.modal-body #id_compra').val(id_compra);
+
+            });
+                //FIN ventana modal para cambiar el estado de la COMPRA
+
+
 
 
 
     </script>
+    @stack('scripts')
 </body>
 
 </html>

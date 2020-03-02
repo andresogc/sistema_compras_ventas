@@ -29,9 +29,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('compras')}}" onclick="event.preventDefault(); document.getElementById('compras-form').submit();"><i class="fa fa-list"></i> Compras</a>
+                <a class="nav-link" href="{{url('compra')}}" onclick="event.preventDefault(); document.getElementById('compra-form').submit();"><i class="fa fa-list"></i> Compras</a>
 
-                <form id="compras-form" action="{{url('compras')}}" method="GET" style="display:none;">
+                <form id="compra-form" action="{{url('compra')}}" method="GET" style="display:none;">
                     @csrf
                 </form>
              </li>
@@ -47,7 +47,7 @@
 
 
 
-           
+
         </ul>
     </nav>
     <button class="sidebar-minimizer brand-minimizer" type="button"></button>
