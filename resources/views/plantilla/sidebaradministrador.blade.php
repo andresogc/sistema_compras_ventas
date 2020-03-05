@@ -46,9 +46,9 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" href="{{url('ventas')}}" onclick="event.preventDefault(); document.getElementById('ventas-form').submit();"><i class="fa fa-list"></i> Ventas</a>
+                <a class="nav-link" href="{{url('venta')}}" onclick="event.preventDefault(); document.getElementById('venta-form').submit();"><i class="fa fa-list"></i> Ventas</a>
 
-                <form id="ventas-form" action="{{url('ventas')}}" method="GET" style="display:none;">
+                <form id="venta-form" action="{{url('venta')}}" method="GET" style="display:none;">
                     @csrf
                 </form>
             </li>
