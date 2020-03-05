@@ -178,4 +178,19 @@ class ProductoController extends Controller
 
 
     }
+
+    public function listarPdf(){
+
+
+        $productos = Producto::join('categorias','productos.idcategoria','=','categorias.id')
+        ->select('productos.id','productos.idcategoria','productos.codigo','productos.nombre','categorias.nombre as nombre_categoria','productos.stock','productos.condicion')
+        ->orderBy('productos.nombre', 'desc')->get();
+
+
+        $cont=Producto::count();
+
+        $pdf= \PDF::loadView('pdf.productospdf',['productos'=>$productos,'cont'=>$cont]);
+        return $pdf->download('productos.pdf');
+
+}
 }
